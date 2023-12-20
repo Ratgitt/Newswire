@@ -1,0 +1,101 @@
+@import 'nullstyle.scss';
+
+.footer {
+
+   background-color: black;
+   color: white;
+
+
+   &__contacts {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 120px;
+   }
+   &__contact-block {
+      display: flex;
+      justify-content: space-evenly;
+      button {
+         margin: 0 10px 0;
+         font-size: 16px;
+         color: grey;
+         background-color: black;
+         transition: 0.15s;
+      }
+      button:hover {
+         color: $yellowColor;
+      }
+   }
+   &__corporate-button {
+      
+   }
+   &__privacy-button {
+      
+   }
+   &__contact-button {
+
+   }
+   &__media-block {
+      a {
+         margin: 0 15px 0;
+         transition: 0.15s;
+      }
+      a:hover {
+         filter: invert(63%) sepia(63%) saturate(600%) hue-rotate(354deg) brightness(143%) contrast(102%);
+      }
+   }
+   &__twitch {
+      display: inline-block;
+      width: 24px;
+      height: 24px;
+      background: url('/src/img/footer/media/twitch.svg') 50% no-repeat;
+   }
+   &__instagram {
+      display: inline-block;
+      width: 24px;
+      height: 24px;
+      background: url('/src/img/footer/media/instagram.svg') 50% no-repeat;
+   }
+   &__twitter {
+      display: inline-block;
+      width: 24px;
+      height: 24px;
+      background: url('/src/img/footer/media/twitter.svg') 50% no-repeat;
+   }
+   &__youtube {
+      display: inline-block;
+      width: 24px;
+      height: 24px;
+      background: url('/src/img/footer/media/youtube.svg') 50% no-repeat;  
+   }
+   &__facebook {
+      display: inline-block;
+      width: 24px;
+      height: 24px;
+      background: url('/src/img/footer/media/facebook.svg') 50% no-repeat;
+   }
+   &__info {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 150px;
+      p {
+         margin: 0 10px 0;
+      }
+   }
+   &__rockstar {
+
+   }
+   &__rockstar-text {
+      
+   }
+   &__cities {
+      display: flex;
+      // p {
+      //    margin: 0 10px 0;
+      // }
+   }
+   &__century {
+      
+   }
+}

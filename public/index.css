@@ -1,0 +1,14 @@
+@font-face {
+   font-family: 'appleSystem';
+   src: url('../fonts/BlinkMacSystemFont-Regular.otf') format('opentype');
+}
+
+body {
+   background-color: #0b0b0b;
+   font-family: 'appleSystem', serif;
+   /* height: 100%; */
+}
+
+#root {
+   height: 100%;
+}

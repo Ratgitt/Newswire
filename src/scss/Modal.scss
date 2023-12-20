@@ -1,0 +1,161 @@
+@import 'nullstyle.scss';
+@import url(https://db.onlinewebfonts.com/c/a2c48a3809e72f399b6c01daa53a05a3?family=Celias+Bold);
+
+$trailerFontColor: white;
+
+.trailer {
+   width: 100%;
+   height: 60px;
+   background: linear-gradient(90deg,#64759d,#826092 40%,#e39986);
+   &__text {
+      color: $trailerFontColor;
+      font-family: 'Celias Bold';
+      font-size: 15px;
+      letter-spacing: 2.8px;
+   }
+   z-index: 49;
+}
+
+.modal-overlay {
+   z-index: 50;
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   background: rgba(0, 0, 0, 0.5); /* Полупрозрачный фон */
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   animation: fadeInOut 0.5s ease-in-out; /* Анимация появления и исчезновения */
+}
+ 
+.modal-content {
+   width: 100%;
+   height: 100%;
+   background: url('../img/header/GTA6_Trailer/gta6_trailer_bg.jpg') 0 0/cover no-repeat;
+   padding: 20px;
+   position: relative;
+   animation: scaleIn 0.5s ease-in-out; /* Анимация увеличения размера */
+   z-index: 51;
+}
+
+.overlay {
+   position: absolute;
+   top: 0;
+   right: 0;
+   bottom: 0;
+   left: 0;
+   background: rgba(0, 0, 0, 1);
+   z-index: 52;
+   transition: 2s;
+   opacity: 0;
+}
+
+.trailerWindow {
+   z-index: 52;
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+}
+
+.close-button {
+   z-index: 52;
+   position: absolute;
+   top: 30px;
+   right: 30px;
+   cursor: pointer;
+   background-color: rgb(40, 40, 40);
+   border-radius: 50%;
+   width: 35px;
+   height: 35px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   transition: 0.3s;
+
+   &:hover {
+      background-color: white;
+   }
+
+   &:hover &__image {
+      filter: invert(1);
+   }
+}
+
+.play-button {
+   z-index: 52;
+   position: absolute;
+   top: 500px;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   background: rgba(0, 0, 0, 0);
+   cursor: pointer;
+   transition: 500ms;
+ 
+   display: flex;
+   justify-content: center;
+   align-items: center;
+ 
+   &:hover .play-button__image {
+     width: 110px;
+     height: 110px;
+   }
+}
+ 
+.play-button__image {
+   width: 100px;
+   height: 100px;
+   transition: 1s;
+   // transition: width 0.3s, height 0.3s; /* Добавим плавную анимацию изменения размера */
+}
+ 
+@keyframes fadeInOut {
+   from {
+     opacity: 0;
+     transform: scale(0);
+   }
+   to {
+     opacity: 1;
+     transform: scale(1);
+   }
+}
+ 
+@keyframes scaleIn {
+   from {
+     transform: scale(0);
+   }
+   to {
+     transform: scale(1);
+   }
+}
+ 
+
+ /* Новая анимация для исчезновения */
+.modal-overlay.closing {
+   animation: fadeOut 0.5s ease-in-out;
+}
+ 
+@keyframes fadeOut {
+   from {
+     opacity: 1;
+   }
+   to {
+     opacity: 0;
+   }
+}
+ 
+ /* Новая анимация для уменьшения размера при исчезновении */
+.modal-content.closing {
+   animation: scaleOut 0.5s ease-in-out;
+}
+ 
+@keyframes scaleOut {
+   from {
+     transform: scale(1);
+   }
+   to {
+     transform: scale(0);
+   }
+}

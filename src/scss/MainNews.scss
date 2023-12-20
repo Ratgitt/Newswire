@@ -1,0 +1,64 @@
+@import 'nullstyle.scss';
+
+.main-news {
+
+   margin-top: 60px;
+   margin-bottom: 80px;
+
+   &__goToNewswire {
+      display: block;
+      background-color: $contentBackgroundColor;
+      color: white;
+      font-size: 30px;
+      font-weight: 600;
+      margin-bottom: 30px;
+   }
+
+   &__block {
+      display: flex;
+      // justify-content: space-between;
+      flex-wrap: wrap;
+      margin-bottom: 30px;
+   }
+}
+
+.vButton {
+   margin: 0 auto;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   background-color: #0b0b0b;
+
+   position: relative;
+
+   &__text {
+      font-size: 20px;
+      font-weight: 400;
+      color: #e8e8e8;
+      line-height: 32px;
+      transition: all .2s ease;
+      z-index: 2;
+   }
+   &__line {
+      width: 103%;
+      height: 4px;
+      background-color: #fcaf17;
+      border-radius: 9px;
+      transition: all .2s ease;
+      z-index: 1;
+
+      position: absolute;
+      bottom: 0px;
+   }
+
+   &:hover &__text {
+      color: #0b0b0b;
+   }
+   
+   &:hover &__line {
+      width: 125%;
+      height: 100%;
+      border-radius: 5px;
+   }
+}

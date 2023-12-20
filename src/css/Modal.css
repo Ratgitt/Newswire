@@ -1,0 +1,306 @@
+@charset "UTF-8";
+@import url(https://db.onlinewebfonts.com/c/a2c48a3809e72f399b6c01daa53a05a3?family=Celias+Bold);
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+:focus, :active {
+  outline: none;
+}
+
+a:focus, a:active {
+  outline: none;
+}
+
+nav, footer, header, aside {
+  display: block;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-style: 100%;
+  line-height: 1;
+  font-style: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input, button, textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a, a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style-type: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-style: inherit;
+  font-weight: 400;
+}
+
+.container {
+  max-width: 90%;
+  margin: 0 auto;
+  height: 100%;
+}
+
+.trailer {
+  width: 100%;
+  height: 60px;
+  background: -webkit-gradient(linear, left top, right top, from(#64759d), color-stop(40%, #826092), to(#e39986));
+  background: linear-gradient(90deg, #64759d, #826092 40%, #e39986);
+  z-index: 49;
+}
+.trailer__text {
+  color: white;
+  font-family: "Celias Bold";
+  font-size: 15px;
+  letter-spacing: 2.8px;
+}
+
+.modal-overlay {
+  z-index: 50;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Полупрозрачный фон */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-animation: fadeInOut 0.5s ease-in-out;
+          animation: fadeInOut 0.5s ease-in-out; /* Анимация появления и исчезновения */
+}
+
+.modal-content {
+  width: 100%;
+  height: 100%;
+  background: url("../img/header/GTA6_Trailer/gta6_trailer_bg.jpg") 0 0/cover no-repeat;
+  padding: 20px;
+  position: relative;
+  -webkit-animation: scaleIn 0.5s ease-in-out;
+          animation: scaleIn 0.5s ease-in-out; /* Анимация увеличения размера */
+  z-index: 51;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgb(0, 0, 0);
+  z-index: 52;
+  -webkit-transition: 2s;
+  transition: 2s;
+  opacity: 0;
+}
+
+.trailerWindow {
+  z-index: 52;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.close-button {
+  z-index: 52;
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  cursor: pointer;
+  background-color: rgb(40, 40, 40);
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+.close-button:hover {
+  background-color: white;
+}
+.close-button:hover .close-button__image {
+  -webkit-filter: invert(1);
+          filter: invert(1);
+}
+
+.play-button {
+  z-index: 52;
+  position: absolute;
+  top: 500px;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background: rgba(0, 0, 0, 0);
+  cursor: pointer;
+  -webkit-transition: 500ms;
+  transition: 500ms;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.play-button:hover .play-button__image {
+  width: 110px;
+  height: 110px;
+}
+
+.play-button__image {
+  width: 100px;
+  height: 100px;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+@-webkit-keyframes fadeInOut {
+  from {
+    opacity: 0;
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes fadeInOut {
+  from {
+    opacity: 0;
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+@-webkit-keyframes scaleIn {
+  from {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  to {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+@keyframes scaleIn {
+  from {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  to {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+/* Новая анимация для исчезновения */
+.modal-overlay.closing {
+  -webkit-animation: fadeOut 0.5s ease-in-out;
+          animation: fadeOut 0.5s ease-in-out;
+}
+
+@-webkit-keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+/* Новая анимация для уменьшения размера при исчезновении */
+.modal-content.closing {
+  -webkit-animation: scaleOut 0.5s ease-in-out;
+          animation: scaleOut 0.5s ease-in-out;
+}
+
+@-webkit-keyframes scaleOut {
+  from {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  to {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+}
+
+@keyframes scaleOut {
+  from {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  to {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+}

@@ -1,0 +1,198 @@
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+:focus, :active {
+  outline: none;
+}
+
+a:focus, a:active {
+  outline: none;
+}
+
+nav, footer, header, aside {
+  display: block;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-style: 100%;
+  line-height: 1;
+  font-style: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input, button, textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a, a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style-type: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-style: inherit;
+  font-weight: 400;
+}
+
+.container {
+  max-width: 90%;
+  margin: 0 auto;
+  height: 100%;
+}
+
+@font-face {
+  font-family: "appleSystem";
+  src: url("../fonts/BlinkMacSystemFont-Regular.otf") format("opentype");
+}
+.menu-block {
+  width: 100%;
+  background-color: black;
+  height: 80px;
+  border-bottom: 1px solid #282828;
+}
+
+.menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 100%;
+}
+.menu__logo {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.menu__button {
+  background: rgba(0, 0, 0, 0);
+  position: relative;
+}
+.menu__logo-image-main {
+  display: block;
+  z-index: 2;
+}
+.menu__logo-image-before {
+  display: block;
+  position: absolute;
+  left: 0px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  z-index: 1;
+}
+.menu__logo-image-after {
+  display: block;
+  position: absolute;
+  top: 0px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  z-index: 0;
+}
+.menu__button:hover .menu__logo-image-before {
+  -webkit-filter: invert(30%) sepia(23%) saturate(5144%) hue-rotate(320deg) brightness(95%) contrast(96%);
+          filter: invert(30%) sepia(23%) saturate(5144%) hue-rotate(320deg) brightness(95%) contrast(96%);
+  -webkit-transform: translate(1px, 2px);
+          transform: translate(1px, 2px);
+}
+.menu__button:hover .menu__logo-image-after {
+  -webkit-filter: invert(39%) sepia(74%) saturate(1455%) hue-rotate(193deg) brightness(91%) contrast(90%);
+          filter: invert(39%) sepia(74%) saturate(1455%) hue-rotate(193deg) brightness(91%) contrast(90%);
+  -webkit-transform: translate(-1px, -1px);
+          transform: translate(-1px, -1px);
+}
+.menu__button:hover .menu__logo-image-main {
+  z-index: 2;
+}
+.menu__nav {
+  height: 100%;
+}
+.menu__nav button {
+  padding: 0 25px 0;
+  height: 100%;
+  color: #e8e8e8;
+  font-size: 16px;
+  background: rgba(0, 0, 0, 0);
+  position: relative;
+}
+.menu__nav button span:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+.menu__nav button:hover span:after, .menu__nav button.active span:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #e8e8e8;
+  -webkit-transition: 0.3s ease-in;
+  transition: 0.3s ease-in;
+}
+.menu__info {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.menu__search {
+  background: rgba(0, 0, 0, 0);
+  padding: 0 10px 0;
+}
+.menu__profile {
+  background: rgba(0, 0, 0, 0);
+  padding: 0 10px 0;
+}

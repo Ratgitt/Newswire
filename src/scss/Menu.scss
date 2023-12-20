@@ -1,0 +1,125 @@
+@import 'nullstyle.scss';
+@font-face {
+   font-family: 'appleSystem';
+   src: url('../fonts/BlinkMacSystemFont-Regular.otf') format('opentype');
+}
+
+.menu-block {
+   width: 100%;
+   background-color: black;
+   height: 80px;
+   border-bottom: 1px solid $borderColor;
+}
+
+.menu {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+
+   width: 100%;
+   height: 100%;
+
+   &__logo {
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+   }
+
+   &__button {
+      background: rgba(0, 0, 0, 0);
+      position: relative;
+   }
+
+   &__logo-image-main {
+      display: block;
+      z-index: 2;
+   }
+
+   &__logo-image-before {
+      display: block;
+      position: absolute;
+      left: 0px;
+      transition: 0.3s;
+      z-index: 1;
+   }
+   &__logo-image-after {
+      display: block;
+      position: absolute;
+      top: 0px;
+      transition: 0.3s;
+      z-index: 0;
+   }
+
+   &__button:hover &__logo-image-before {
+      filter: invert(30%) sepia(23%) saturate(5144%) hue-rotate(320deg) brightness(95%) contrast(96%);
+      transform: translate(1px, 2px);
+   }
+   &__button:hover &__logo-image-after {
+      filter: invert(39%) sepia(74%) saturate(1455%) hue-rotate(193deg) brightness(91%) contrast(90%);
+      transform: translate(-1px, -1px);
+   }
+   &__button:hover &__logo-image-main {
+      z-index: 2;
+   }
+
+   &__nav {
+      height: 100%;
+      button {
+         padding: 0 25px 0;
+         height: 100%;
+         color: $menuFontColor;
+         font-size: 16px;
+
+         background: rgba(0, 0, 0, 0);
+         position: relative;
+         
+         span:after {
+            content:"";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            // content:"";
+            // position: absolute;
+            // bottom: 0;
+            // left: 0;
+            // width: 100%;
+            // height: 2px;
+            // background-color: $menuFontColor;
+            // transition: 0.3s ease-in;
+         }
+
+         &:hover span:after,
+         &.active span:after {
+            content:"";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background-color: $menuFontColor;
+            transition: 0.3s ease-in;
+         }
+      }
+   }
+   &__info {
+      height: 100%;
+      display: flex;
+      align-items: center;
+   }
+   &__search {
+      background: rgba(0, 0, 0, 0);
+      padding: 0 10px 0;
+   }
+   &__search-image {
+      
+   }
+   &__profile {
+      background: rgba(0, 0, 0, 0);
+      padding: 0 10px 0;
+   }
+
+   &__profile-image {
+      
+   }
+}

@@ -1,0 +1,16 @@
+@import 'nullstyle.scss';
+@import url(https://db.onlinewebfonts.com/c/a2c48a3809e72f399b6c01daa53a05a3?family=Celias+Bold);
+
+.header {
+   &__trailer {
+      width: 100%;
+      height: 60px;
+      background: linear-gradient(90deg,#64759d,#826092 40%,#e39986);
+   }
+   &__trailer-text {
+      color: white;
+      font-family: 'Celias Bold';
+      font-size: 16px;
+      letter-spacing: 2.8px;
+   }
+}
